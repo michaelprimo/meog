@@ -1,0 +1,7 @@
+- Howdy! Welcome to Meog!
+
+- How this website is hosted
+
+- Semantic HTML
+
+- HTTPS
