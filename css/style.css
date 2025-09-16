@@ -1,0 +1,53 @@
+:root 
+{
+    --main-bg-color: #170055;
+    --main-text-color: #B5FFD9;
+    --main-border-color: #3E00FF;
+    --main-link-color: #AE00FB;
+}
+
+body
+{
+    background-color: var(--main-bg-color);
+    color: var(--main-text-color);
+}
+
+a
+{
+    color: var(--main-text-color);
+}
+
+.linkButton
+{
+    color: var(--main-text-color);
+    text-decoration: none;
+    background-color: var(--main-bg-color);
+    border: 4px solid var(--main-border-color);
+    border-radius: 20px;
+    padding: 8px;
+    font-size: 20px;
+    
+}
+
+#main-title
+{
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+
+#category-title
+{
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+a
+{
+    color: var(--main-link-color);
+    transition: border-color 0.3s;
+}
+
+a:hover
+{
+    border-color: var(--main-border-color);
+}
