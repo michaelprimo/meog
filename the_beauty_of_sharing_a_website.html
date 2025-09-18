@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://meog.it/favicon.ico" />
     <link rel="stylesheet" href="/css/style.css" />
-    
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
     <!-- Primary Meta Tags -->
     <title>Meog - The beauty of sharing a website</title>
@@ -26,54 +26,53 @@
     <meta property="twitter:description" content="Discover the art of sharing websites with Meog: learn about meta tags, favicons, and the details that enhance your online presence." />
     <meta property="twitter:image" content="https://meog.it/img/meog_logo_metatag.png" />
 </head>
-<body>
+<body class="md:mx-[10%] lg:mx-[20%] sm:mx-[5%] mx-2">
 
     <header>
         <img src="/img/meog_logo.webp" alt="Meog logo" width="240" height="100">
-        <h3>A metablog which grows with you</h3>
+        <h1 id="main-title">A metablog which grows with you</h1>
         <a href="/index.html">Back to Home</a>
     </header>
 
     <main>
 
         <section>
-            <h2>The beauty of sharing a website</h2>
-            <h3>15 September 2025</h3>
+            <h2 id="category-title">The beauty of sharing a website</h2>
             
             <article>
 
-            <p>
+            <p class="mb-5">
                 Have you ever searched something on Google, Bing, DuckDuckGo or another search engine?  
                 You type your words, and suddenly you see a list of websites: each with an icon, a title, and a short description.
             </p>
 
-            <p>
+            <p class="mb-5">
                 Or maybe someone shared a website with you through a simple link.  
                 Alongside the link, you saw a preview image, a title, and a description.  
                 Both situations are possible thanks to <strong>meta tags</strong>.
             </p>
 
-            <p>
+            <p class="mb-5">
                 To generate the meta tags for each page of Meog, I used  
                 <a href="https://metatags.io/" target="_blank" rel="noopener noreferrer">metatags.io</a>.  
                 There I set the image to display when sharing a post, making every link to Meog look more visual and engaging.
             </p>
 
-            <p>
+            <p class="mb-5">
                 I also created the small icon you see on the browser tab.  
                 This file is called <em>favicon.ico</em>, a 48×48 image with a reduced version of the Meog logo.  
                 It is linked with the tag:  
             </p>
 
-            <pre>
+            <p class="mb-5">
             &lt;link rel="icon" href="https://meog.it/favicon.ico" /&gt;
-            </pre>
+            </p>
 
-            <p>
+            <p class="mb-5">
                 With these small details, sharing your website becomes a much more pleasant and professional experience.  
             </p>
 
-            <p>
+            <p class="mb-5">
                 See you in the next post!
             </p>
 
@@ -83,8 +82,9 @@
     </main>
 
     <footer>
+        <h3>Release date: 15 September 2025</h3>
         <p>Contact us at <a href="mailto:info@michaelprimo.it">info(at)michaelprimo.it</a></p>
-        <p>&copy; 2025 Meog</p>
+        <p>&copy; 2025 Meog - Michael Primo</p>
     </footer>
 
 </body>
