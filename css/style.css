@@ -37,15 +37,14 @@ a
 #main-title
 {
     font-size: 35px;
-    margin-bottom: 10px;
     font-family: 'Courier New', Courier, monospace;
+    word-spacing: -5px;
 }
 
 #category-title
 {
-    font-size: 30px;
+    font-size: 25px;
     margin-bottom: 15px;
-    
 }
 
 a
@@ -63,4 +62,14 @@ a:hover
 a:active
 {
     color: var(--main-text-color);
+}
+
+header
+{
+   margin: 10px 0px;
+}
+
+main, footer
+{
+    margin-bottom: 10px;
 }
