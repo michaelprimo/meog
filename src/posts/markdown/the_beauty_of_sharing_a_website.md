@@ -1,0 +1,26 @@
+## The Beauty of Sharing a Website
+
+Have you ever searched something on Google, Bing, DuckDuckGo or another search engine? You type your words, and suddenly you see a list of websites: each with an icon, a title, and a short description.
+
+Or maybe someone shared a website with you through a simple link. Alongside the link, you saw a preview image, a title, and a description. Both situations are possible thanks to **meta tags**.
+
+---
+
+### Generating Meta Tags
+
+To generate the meta tags for each page of Meog, I used [metatags.io](https://metatags.io/). There I set the image to display when sharing a post, making every link to Meog look more visual and engaging.
+
+---
+
+### The Browser Icon: Favicon
+
+I also created the small icon you see on the browser tab. This file is called *favicon.ico*, a 48×48 image with a reduced version of the Meog logo. It is linked with the tag:
+
+```html
+<link rel="icon" href="[https://meog.it/favicon.ico](https://meog.it/favicon.ico)" />
+```
+
+
+With these small details, sharing your website becomes a much more pleasant and professional experience.
+
+See you in the next post!

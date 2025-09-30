@@ -1,0 +1,40 @@
+## How a webpage is made
+
+Welcome to this post!
+
+...Wait a moment, how is it possible that you are seeing this text? What is behind this web page?
+What you are looking at right now is an **HTML (HyperText Markup Language)** page, a text file with instructions called **"tags"** to give it shape, functionality, and interactivity when opened by a browser.
+
+---
+
+### The Basics of HTML Tags
+
+Here's an example: the links you see on a site? The code is wrapped in the "a tag" like this: 
+
+**`<a href="any_online_page_link">text</a>`**.
+
+Every paragraph has a **`<p>`** tag. So if you insert this into a text file and then convert it to HTML: 
+
+**`<p>hello</p><p>how</p><p>are</p><p>you</p>`**, 
+
+when you open that file with a browser, you should see:
+
+**hello**
+
+**how**
+
+**are**
+
+**you**
+
+on the screen. Furthermore, there are other tags that can indicate parts of the site like **`<header>`** and **`<footer>`**.
+
+---
+
+### Accessibility and Organization
+
+For **accessibility**, these pages use these very tags to allow screen readers to read the content and help people with disabilities navigate the site anyway. Knowing which tags to use is fundamental for creating, organizing, and making your content accessible on the web.
+
+I'll leave you with this example: [(MDN Cheatsheet)](https://developer.mozilla.org/en-US/docs/Web/HTML/Guides/Cheatsheet).
+
+See you in the next post, and you can find the code behind this very page [here](https://github.com/michaelprimo/meog/blob/main/how_a_webpage_is_made.html). Have a great day!
