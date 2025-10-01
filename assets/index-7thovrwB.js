@@ -163,7 +163,7 @@ Beyond direct submission, two critical files were created to facilitate the work
 \r
 By following these steps, your site will become visible to search engines as quickly as possible (usually within 48 hours for the initial operation).\r
 \r
-**Thank you for reading this post. Have a great day!**`,wb=`# Meog is now made in React: here's why\r
+**Thank you for reading this post. Have a great day!**`,wb=`## Meog is now made in React: here's why\r
 \r
 Howdy! Welcome to this post!\r
 \r

@@ -1,4 +1,4 @@
-# Meog is now made in React: here's why
+## Meog is now made in React: here's why
 
 Howdy! Welcome to this post!
 
