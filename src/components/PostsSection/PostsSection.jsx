@@ -27,6 +27,9 @@ const PostsSection = () => {
                 <p className="mb-10 font-normal">
                     <Link to="/how_meog_got_indexed_on_search_engines" className="linkButton">How Meog got indexed on Search Engines</Link>
                 </p>
+                <p className="mb-10 font-normal">
+                    <Link to="/meog_is_now_made_in_react" className="linkButton">Meog is now made in React: here's why</Link>
+                </p>
             </nav>
            
         </section>

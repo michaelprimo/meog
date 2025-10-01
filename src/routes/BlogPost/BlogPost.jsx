@@ -45,16 +45,15 @@ function BlogPost() {
     // --- Rendering Condizionale ---
 
     if (loading) {
-        return <p className="text-center mt-8">Caricamento ultra-veloce...</p>;
+        return <p className="text-center mt-8">Loading...</p>;
     }
 
     if (error || !markdown) {
         return (
             <div className="text-center mt-8">
-                <h2 className=" text-xl">
-                    404 | Post "{postSlug}" non trovato.
+                <h2 className="text-xl">
+                    404 | Post "{postSlug}" not found.
                 </h2>
-                <p>Verifica che il file .md esista in /src/posts/markdown/ e che lo slug sia corretto.</p>
             </div>
         );
     }
