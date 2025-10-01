@@ -1,0 +1,10 @@
+# netlify.toml
+
+# Regola fondamentale per il routing delle Single Page Applications (SPA).
+# Qualsiasi richiesta che non corrisponde a un file esistente verrà
+# reindirizzata al file principale index.html.
+
+[[redirects]]
+  from = "/*"
+  to = "/index.html"
+  status = 200
