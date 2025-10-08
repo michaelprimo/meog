@@ -30,6 +30,9 @@ const PostsSection = () => {
                 <p className="mb-10 font-normal">
                     <Link to="/meog_is_now_made_in_react" className="linkButton">Meog is now made in React: here's why</Link>
                 </p>
+                <p className="mb-10 font-normal">
+                    <Link to="/meog_articles_are_now_madeinmarkdown" className="linkButton">Meog's articles are #MadeinMarkdown</Link>
+                </p>
             </nav>
            
         </section>

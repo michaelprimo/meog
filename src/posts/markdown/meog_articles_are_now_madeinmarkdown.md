@@ -1,0 +1,17 @@
+## Meog's articles are #MadeinMarkdown
+
+Initially, Meog was just a collection of interconnected HTML pages. Every time a new article needed to be created, a copy of an existing page was made and then modified like a regular website.
+
+With the migration to **JavaScript and React**, there is now a single main page that fetches and displays the content from specific text files.
+
+Those text files are known as "**Markdown**."
+
+Although not widely known outside of development communities, this text file format is actually used on forums, blogs (and now on metablogs 😉), and major platforms like **Discord** and **GitHub**.
+
+This approach not only makes Meog more organized in terms of content but also makes writing articles significantly easier.
+
+Markdown files can also be edited much more simply than an HTML file, allowing you to define the size of characters and the inclusion of images, for instance, with plain syntax.
+
+Therefore, this change was necessary, and I hope you have learned something new today.
+
+See you in the next post!
