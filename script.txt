@@ -1,0 +1,329 @@
+
+- Github Pages/Netlify
+
+- SEO/Essere visibili online?
+
+- Google Analytics / Privacy Policy
+
+- Logo
+
+- RSS Feed
+
+(CSS Era)
+
+- Light/Dark Mode?
+
+(Linkedin Posts)
+
+Si può superare il modo che vediamo gli iscritti, quindi 1000 persone che iscrivono in un giorno non sono numeri, ma persone, ecc?
+
+(Studio)
+
+React
+
+Prima chiedevi i dati dal server, ma ogni browser è diverso e quindi ci 
+sono problemi (soprattutto per Javascript). Prima c'era JQuery che aiutava,
+ma ogni documento ha un DOM (albero di elementi) e i siti stavano diventando
+sempre più grandi (blog, Facebook)... Backbone.js organizzava file js per esempio
+e queste librerie rendevano facile operare con il DOM.
+Single Page Applications/AJAX. Carichi l'app una volta sola dal server
+e Javascript si aggiorna senza mai toccare il server.
+2010: Angular JS aiutava con i container nel realizzare applicazioni
+enormi. MVC, ma il tutto stava diventando tutto più complesso, dati
+dappertutto e le app enormi erano ingestibili. Facebook non usava AngularJS,
+ma aveva problemi comunque, perciò realizzarono React.
+
+Nel 2013 Facebook realizzarono React e Angular fu riscritto da zero nel 2014
+ma a quel tempo la gente si spostò su React, così diventò il miglior framework
+frontend.
+
+React gestisce il DOM
+
+DOM: Document Object Model (Javascript lo manipola, quindi possiamo manipolare
+tutti gli elementi di un sito web). In questo modo possiamo modificare l'UI
+Ma in questa maniera "imperativa" è difficile tracciare tutti i movimenti
+dei dati, per questo esiste la modalità dichiarativa.
+Repaint (cancellare e rifare un evento)/Reflow (ricalcolare l'interfaccia)
+Dai delle informazioni a React e React fa tutto lui senza che tu tocchi
+qualcosa. React ha migliorato la qualità del codice.
+
+Component Architecture
+Building Websites like Lego Blocks (Componenti grandi e piccoli)
+
+Componenti = funzioni Javascript con attributi (props) che possono essere
+anche classi che possiamo aggiungere nel nostro sito come Lego Blocks.
+
+Scaricare React Developer Tools sul browser e ti fa vedere nella console
+il JSX dei componenti React.
+
+Unidirectional Data Flow (State/Components/JSX)
+
+Virtual DOM (JSX)
+
+function React(state, components)
+{
+
+}
+
+Se cambia lo stato, il sito cambia, ma i dati non possono ritornare
+indietro. In questa maniera evitiamo il disastro di AngularJS.
+
+Learn once, run everywhere (immagina piccoli robot da programmare e
+fanno tutto al posto tuo, inoltre React è multipiattaforma)
+
+Cosa fare per essere un Senior React Developer:
+
+Decide on Components;
+Decide the State and where it lives;
+What changes when state changes.
+
+npm vs npx
+
+npx = incluso in npm (node package manager)
+create react app: tool realizzato da Facebook per realizzare facilmente app React template
+
+npm install installi una volta globalmente (ma viene sempre aggiornato, quindi è inutile)
+
+npm install -g create-react-app (global)
+
+cra npm i -g cowsay (install globally)
+
+npm list cowsay (core folders vuote perchè installate globalmente)
+npm list -g cowsay (vedi dove si trova)
+
+npm uninstall -g cowsay (disinstalli)
+npm list -g cowsay (non c'è)
+
+npx cowsay hello (installa ed esegue subito, non c'è nulla su npm list 
+perchè poi cancella il pacchetto alla fine per risparmiare spazio 
+e quando scarichi qualcosa con npx è sempre l'ultima versione a meno che tu non lo decidi in anticipo)
+
+react,react-dom,react-scripts: importanti
+web-vitals: non importante
+
+react-scripts: tools utili
+
+React = "engine" (application builder)
+ReactDOM = related to the web (DOM) actually building apps 
+
+React + ReactDOM = quello che ci serve per creare app 
+
+React Native, VR, 360 e altro possono essere inseriti per fare app per più piattaforme
+
+Hooks and Classes: gli Hooks sono più recenti,
+ma qualcuno potrebbe usare le Classes di nuovo (legacy)
+
+Renders vs Rerenders (cosa fa React?)
+
+Rendering: far vedere HTML, CSS e JS nel sito
+JSX = Syntax extension of JS (aggiungi
+funzionalità) simile a HTML. 
+
+Rerender = repaint DOM/UI 
+
+Return(inserire JSX qui)
+
+Component
+
+class App extends Component
+constructor()
+super()
+
+Event handler = se capita un evento, possiamo far partire una altra cosa
+a nostro piacimento.
+
+const obj1 = {name: "Yihua"};
+const obj2 = obj1;
+obj2 === obj1 //true
+obj1.name = 'Andrei';
+obj2 //name: andrei . Ci deve essere un cambiamento importante per 
+// aggiornare il campo.
+
+const obj3 = Object.assign({}, obj1);
+obj3 // {name: 'Andrei'}
+
+If state is completely different object in memory = rerender
+
+Shallow merge = update and check keys of state 
+setState = update state in a complete different object in memory to
+force rerender
+
+Shallow merge = controlla le chiavi e verifica se qualcosa è cambiato.
+In caso affermativo, rerenderizza tutto. Vale solo con le chiavi passate.
+
+React = run asynchronously 
+
+Se usi map con molti valori, hai bisogno di key.
+key serve per React.
+
+SPA (Single Page Applications)
+Web before SPA: chiediamo pagine ad un server, come l'home page.
+HTML,CSS,JS richiesti e ricreazione della pagina.
+Se chiediamo una altra pagina si rifa di nuovo il download dei materiali.
+Pre-2010 era tutto così, adesso molto di meno.
+
+Web with SPA: chiedi una pagina, ricevi il codice dal server con React.
+React compila tutto e fa il resto senza chiamare più il server, 
+pagine extra incluse (tranne quando ci sono delle customizzazioni extra).
+
+Monster Rolodex: accedere al server API i dati.
+
+https://jsonplaceholder.typicode.com/users
+
+Se la richiesta API fallisce per qualche motivo, di solito non prende
+nessun dato e quindi hai valori vuoti nello stato.
+
+componentDidMount = capita una volta sola quando non è montato il componente.
+Utile per avere informazioni dall'API (fetch) (lifecycle method)
+
+React lifecycle
+
+- initialize the state on the constructor
+- render = set what you want to show
+- componentDidMount = mount initial UI into DOM.
+- run lifecycle method componentDidMount
+1 (on state, console.log)
+2 (on render, console.log)
+3 (on componentDidMount, console.log)
+2 (on render, console.log)
+
+componentDidMount = rerender again (render()) and it's asynchronous.
+
+è difficile vedere come e quando React chiama il metodo render()
+
+Ogni JSX tag è un componente. Per ogni HTML tag c'è un componente JSX.
+Certi tag sono rinominati diversamente, soprattutto le proprietà
+(className al posto di class, perchè espandendo Javascript non poteva
+mettere class basato su CSS perchè è un keyword di Javascript).
+
+Ogni cosa con un _ non dovremmo avere accesso a quelle proprietà di un evento.
+
+if filter true = keep, if false no.
+Meglio usare non modifying methods (immutability) e piuttosto generare un
+nuovo array con le modifiche che vogliamo.
+
+props = properties
+
+Quando chiamiamo setState e props, chiamiamo anche render.
+Se chiamiamo props, rerenderizziamo il componente.
+From the top-down
+
+renders when mount is called and when props are called/changed and
+when setState is called.
+
+Non puoi avere più App.js e App.css (vale per tutto)
+
+Tutti i CSS e JS alla fine vengono messi in un file
+CSS e JS unico. Poi studieremo CSS-in-JS.
+
+React gestisce classi e funzioni (functional programming) per aiutare
+sviluppatori che vengono da entrambi i mondi.
+
+Common Lifecycle
+
+componentDidMount
+componentDidUpdate
+componentDidUnmount
+
+( forceUpdate() è sconsigliato. Fidati di React. ).
+
+Functional Components don't have common lifecycles but they follow
+the exact same lifecycle.
+
+//pure functions: ti danno sempre lo stesso risultato, quindi niente random
+e varie. Un esempio è la calcolatrice, dai dei valori e ricevi un risultato.
+
+//impure functions: il risultato non è isolato, perchè conta su fattori
+esterni invece che solo gli argomenti/props passati.
+
+//side effects: quando una funzione crea effetti al di fuori dello scope,
+come una funzione che cambia una variabile che influenza il risultato di essa.
+
+Le impure functions sono comunque utili (Hooks :O). Occhio agli side effects!
+
+StrictMode rerenderizza due volte per essere sicuri
+di trovare bug.
+
+Provare React Developer Tools
+
+Real DOM: expensive to make changes 
+
+Virtual DOM: Javascript representation of Real DOM.
+(Snapshot)
+
+Virtual DOM Copy: actual copy for making changes. Verify changes and
+passing them to Virtual DOM Snapshot and then Real DOM.
+
+App Component = top of the node
+
+Unmounting = remove elements/node from the Virtual DOM
+
+React = "engine"
+ReactDOM = who is doing the changes
+
+class essendo considerato una stringa non è protetta e assomigliante
+alla keyword di Javascript
+
+Paint flashing = vedere render e rerender (repaint) in green
+Refresh the page = all components mounted
+Utile per vedere cosa rerenderizza.
+
+Reflow every component modified (prima un elemento "non esiste" se vuoto,
+ma poi il reflow capita se riempi/modifichi il componente in questione).
+
+<div id="root">mama</div>
+
+const Person = props =>
+{
+    return React.createElement('div', {}, [
+        React.createElement('h1', {}, props.name),
+        React.createElement('p', {}, props.occupation)
+    ])
+}
+
+const App = () =>
+{
+    return React.createElement('div', {}, [
+        React.createElement('h1', {class: 'title'});
+        React.createElement(Person, {name: 'Yihua', occupation: 'instructors'}, null)
+    ]);
+}
+
+//ReactDOM.render(React.createElement(App), document.getElementId("root"));
+
+const container = document.getElementById('root');
+const root = ReactDOM.createRoot(container);
+root.createRoot(container)
+
+git checkout = switch branch
+git checkout -m = create new branch
+
+
+index = root level if true (route) senza mettere pacchetto
+
+---
+
+---
+
+😺 Build in Public di Meog #5: (still) working in progress 😺
+
+Ehilà! Questa settimana è stata...
+
+...beh. Dopo la migrazione in React (che era necessaria, aggiungo) ho visto che i problemi sono aumentati abbastanza:
+
+- con la generazione dinamica e a lato client delle pagine, la SEO si è sballata abbastanza, visto che Google non ha più pagine "fisiche" come prima da indicizzare;
+- con la nuova architettura (Single Page Application) che, invece di darti un link per la pagina HTML prende l'articolo in Markdown da una cartella del progetto, è più lento di prima (di qualche secondo, rendendo il sito meno performante e accessibile).
+
+Una soluzione temporanea che mi è venuta in mente è quella di fare un'altra migrazione, da React a Gatsby.js (framework in React fatto apposta per i blog e dovrebbe sistemare i problemi scritti sopra), ma vedendo tutto quello che c'era da fare e con lo studio sono finito in burnout.
+
+Ho quindi pensato a come proseguire Meog, preso una pausa, scritto articoli e sistemato un pò internamente il sito per prepararmi all'eventuale migrazione.
+
+Lascio come immagine quello che può succedere se sbagli a digitare l'URL di una pagina sul sito (ringraziamo React Router per il suo servizio).
+
+Spero di dirvi di più Giovedì prossimo! Buona giornata a voi,
+
+Michael
+
+#buildinpublic #meog #webdev #programming #LinkedinItalia
+
+---
