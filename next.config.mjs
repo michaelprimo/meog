@@ -1,15 +1,7 @@
-import createMDX from '@next/mdx';
- 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Configure `pageExtensions` to include markdown and MDX files
-  pageExtensions: ['js', 'jsx', 'md', 'mdx', 'ts', 'tsx'],
-  // Optionally, add any other Next.js config below
+  output: 'export', // Outputs a Single-Page Application (SPA).
+  distDir: './dist', // Changes the build output directory to `./dist/`.
 }
  
-const withMDX = createMDX({
-  extension: /\.(md|mdx)$/,
-});
- 
-// Merge MDX config with Next.js config
-export default withMDX(nextConfig);
+export default nextConfig
