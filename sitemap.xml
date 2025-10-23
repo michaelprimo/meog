@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://meog.it/</loc>
+  <lastmod>2025-10-23T17:19:58+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://meog.it/article/welcome_to_meog</loc>
+  <lastmod>2025-10-23T17:19:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://meog.it/article/how_a_webpage_is_made</loc>
+  <lastmod>2025-10-23T17:19:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://meog.it/article/where_meog_lives</loc>
+  <lastmod>2025-10-23T17:19:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://meog.it/article/habemus_logo</loc>
+  <lastmod>2025-10-23T17:19:59+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://meog.it/article/the_beauty_of_sharing_a_website</loc>
+  <lastmod>2025-10-23T17:20:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://meog.it/article/heres_how_we_can_style_a_website</loc>
+  <lastmod>2025-10-23T17:20:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://meog.it/article/how_meog_got_indexed_on_search_engines</loc>
+  <lastmod>2025-10-23T17:20:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://meog.it/article/meog_is_now_made_in_react</loc>
+  <lastmod>2025-10-23T17:20:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://meog.it/article/meog_articles_are_now_madeinmarkdown</loc>
+  <lastmod>2025-10-23T17:20:00+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+
+
+</urlset>
