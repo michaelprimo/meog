@@ -327,3 +327,216 @@ Michael
 #buildinpublic #meog #webdev #programming #LinkedinItalia
 
 ---
+
+Parachain 2
+
+
+
+-Storia
+
+Ruto si risveglia come spirito nell'Oltremondo, una parte dell'inferno sorvegliata dal pacifico LARPiro Oltro che gli racconta un pò dov'è e che ci fa lì e... di non pensare alla Parachain.
+
+Ruto girando vede dei tesori magici appartenuti all'universo precedente (Parachain 1) e un nemico (LARPiro) che lo aggredisce, dicendogli che si trova lì perché, mentre i suoi amici sono stati colpiti dall'inondazione e finiti nel mondo reale. 
+
+Ruto quindi capisce un pò di più i suoi poteri e vede un tizio bislacco chiamato Chara Pain, che gli dice di essere lo spirito della Parachain (e che é stato protettore della Parachain quando era in vita), e quindi infonde la sua energia spirituale alla Parachain da quel posto (nella Terra non c'è abbastanza energia da inviare).
+
+Per ritornare nel mondo reale, bisogna risvegliare il demone volante Bob (ma é pericoloso) e farsi richiamare da Atelilasco e Liliana.
+
+Oltro ha visto tutto e consiglia a Ruto di ripensarci ed eventualmente rimanere lì a cercare tesori e aste assieme agli spiriti diventati LARPiri di Oltro.
+
+Ruto risveglia comunque Bob e Oltro cerca di fermarlo. Non ci riesce e viene dissolto da Chara Pain, perché Oltro dice che la Parachain é il male e deve essere distrutta. Chara Pain dice l'opposto e che Ruto deve salvare la Parachain. Ruto può o cercare di distruggerla oppure salvarla affrontandolo.
+
+
+
+-Tesori / Skills
+
+Frazione di Cringe
+
+Trofeo Segreto 1
+
+Bastone Pescico
+
+Grigliata Divina
+
+Pietra del Demone
+
+Occhiali e Coda di Yora
+
+Pecunia
+
+Blocco Creativo
+
+Cucciolo di SlimiK
+
+Polvere di Stelle
+
+Storia dell'Universo
+
+"Niente" MP4 Arrugginito 
+
+
+
+-Nemici
+
+LicARPiro
+
+Olenga
+
+Arog
+
+Drawoh
+
+Der Nogard
+
+Oltro 
+
+Chara Pain
+
+Maxwell
+
+- Skills
+
+!Ruto
+
+Assorbi vita (TP 100): Attacco rapidissimo che assorbe vita basato su Fortuna x5.
+
+Colpo spiritico (TP 100): Infligge danni e porta a 0 MP e TP avversari.
+
+Iperguardia (TP 100): Dimezza tutti i danni per 3 turni e recupera HP e MP basati sulla Fortuna.
+
+Magia (40 MP) infligge danni a tutti e potenzia il proprio attacco.
+
+Ruba TP, riduce fortuna nemica e velocità.
+
+Ignora difesa, riduce difesa fisica e magica avversaria.
+
+(Boost a Attacco Magico, Cura HP, Guardia)
+
+!LicARPiro
+
+Assorbi vita
+
+Magia
+
+!Olenga
+
+Colpo infernale (TP 100) ATK*6, POISON
+
+Iperguardia 
+
+Superguardia (annulla tutti i debuff, migliora difesa e difesa magica, +50 TP)
+
+Counter (
+
+velocissimo, contrattacca tutti i colpi per questo turno. La fa ogni 3 turni)
+
+!Der Nogard
+
+Berserk - Cura HP, potenzia attacco, riduce difesa magica.
+
+Fast boi - Per tre turni può attaccare due volte di fila.
+
+-----
+
+-Tesori / Skills
+
+Frazione di Cringe
+
+Combat: 25% Contrattacco fisico/magico, -25% HP Max
+Asta: Niente bonus Oltredollaro 
+
+Trofeo Segreto 1
+
+Combat: +33% Crit, -25% Attacco
+Asta: Bonus speciale anche in pareggio
+
+Blooble Translate
+
+Combat: Eviti 1/3 dei danni, -25% Velocità 
+Asta: 1: Pareggio
+
+Grigliata Divina
+
+Combat: 100% Bruciare per Attacco, -25% MP Max
+Asta: Bonus Oltredollaro 12
+
+Pietra del Demone
+
+Combat: -25% MP Cost, -25% Mag
+Asta: 3: +1 Oltredollaro
+
+Occhiali di Yora
+
+Combat: -20% Precisione, +30% ATK, SPD
+Asta: 4: Vinci il round
+
+Pecunia
+
+Combat: +25% TP Charge, - 25% Difesa
+Asta: +1 Oltredollaro 
+
+Ortaggi di Blocko
+
+Combat: +5% HP Regen, -25% Res
+Asta: - 20 punti
+
+Cucciolo di SlimiK
+
+Combat: -50% Farmacologia, +30%HP, DEF
+Asta: Bonus speciale 15
+
+Polvere di Stelle
+
+Combat: Guardia 50%, +30% MP, MDF
+Asta: 2: + 10 punti
+
+Storia dell'Universo
+
+Combat: 0% TP Regen, +30% MAT, LUK
+Asta: - 1 Oltredollaro 
+
+Spilla da Serpe
+
+Combat: +2 TP Skill, -25% Fortuna
+Asta: + 20 punti
+
+Combat bonus
+
+!+33% Crit, -25% Attacco 
+!+5% HP Regen, -25% Res
+!-25% MP Cost, -25% Mag
+!+25% TP Charge, - 25% Difesa
+!Eviti 1/3 dei danni, -25% Velocità 
+!+2 TP Skill, -25% Fortuna
+!25% Contrattacco fisico/magico, -25% HP Max
+!100% Bruciare per Attacco, -25% MP Max
+!-50% Farmacologia, +30% HP, DEF
+!-20% Precisione, +30% ATK, SPD
+!0% TP Regen, +30% MAT, LUK
+!Guardia 50%, +30% MP, MDF
+
+Asta bonus
+
+!+1 Oltredollaro 
+!-1 Oltredollaro 
+!+ 20 punti
+!- 20 punti
+!1: Pareggio
+!2: + 10 punti
+!3: +1 Oltredollaro 
+!4: Vinci il round
+!Bonus speciale 15
+!Bonus speciale anche in pareggio
+!Bonus Oltredollaro 12
+!Niente bonus Oltredollaro 
+
+-Status
+
+Bruciato (-10% HP Regen)
+Iperguardia (dimezza danni per 3 turni)
+Counter
+Berserk
+Rigene
+Antidebuff
+Stun
+MP Debuff

@@ -1,73 +1,120 @@
 import { notFound } from 'next/navigation';
 import path from 'path';
 import fs from 'fs';
+import matter from 'gray-matter';
 
-// **********************************************
-// 1. Logica SSG Stabile per la Build (DA MANTENERE)
-// **********************************************
 const POSTS_DIR = path.join(process.cwd(), 'src', 'app', 'posts', 'markdown');
 
-export function generateStaticParams() {
-    // ⚠️ STAMPA DI DEBUG
-    console.log("Tentativo di lettura da:", POSTS_DIR); 
+// Funzione helper per leggere i metadati
+function getPostMetadata(slug) {
+    try {
+        const filePath = path.join(POSTS_DIR, `${slug}.mdx`);
+        const fileContent = fs.readFileSync(filePath, 'utf8');
+        const { data } = matter(fileContent);
+        return data;
+    } catch (e) {
+        return null;
+    }
+}
 
+// Genera i parametri statici
+export function generateStaticParams() {
+    console.log("Lettura da:", POSTS_DIR);
+    
     let files = [];
     try {
         files = fs.readdirSync(POSTS_DIR);
-        // ⚠️ STAMPA DI DEBUG
-        console.log("File trovati:", files.length, "file(s)");
+        console.log("File trovati:", files.length);
     } catch (e) {
-        // 🛑 NON RESTITUIRE SOLO [], LANCIA L'ERRORE PER VEDERLO
-        console.error("ERRORE CRITICO in generateStaticParams. Il percorso non è valido:", e.message);
-        throw new Error("Impossibile trovare la directory dei post. Controllare il percorso POSTS_DIR.");
+        console.error("ERRORE in generateStaticParams:", e.message);
+        throw new Error("Impossibile trovare la directory dei post.");
     }
-    
-    // ... la mappatura
+   
     const params = files
         .filter(file => file.endsWith('.mdx'))
         .map(file => ({
             slug: file.replace(/\.mdx$/, ''),
         }));
-        
-    // ⚠️ STAMPA DI DEBUG
-    console.log("Parametri statici generati:", params);
-
-    // Se params è vuoto E non è un errore di percorso, assicurati di avere file .mdx
-    if (params.length === 0) {
-         console.warn("Attenzione: nessun file .mdx trovato. Se stai usando output:export, devi avere almeno un file.");
-    }
     
+    console.log("Parametri statici generati:", params);
+    
+    if (params.length === 0) {
+        console.warn("Nessun file .mdx trovato!");
+    }
+   
     return params;
 }
 
-// **********************************************
-// 2. Componente Page (Torna all'importazione DIRETTA, ma solo con il slug statico)
-// **********************************************
-export default async function Page({ params }) {
-    const slug = params.slug;
+// Genera i metadati dinamicamente per ogni articolo
+export async function generateMetadata({ params }) {
+    const { slug } = params;
+    const metadata = getPostMetadata(slug);
+    
+    if (!metadata) {
+        return {
+            title: 'Articolo non trovato',
+        };
+    }
+    
+    return {
+        title: metadata.title,
+        description: metadata.description,
+        keywords: metadata.keywords,
+        authors: [{ name: metadata.author }],
+        openGraph: {
+            type: 'article',
+            title: metadata.title,
+            description: metadata.description,
+            images: metadata.image ? [metadata.image] : [],
+            publishedTime: metadata.date,
+            authors: [metadata.author],
+        },
+        twitter: {
+            card: 'summary_large_image',
+            title: metadata.title,
+            description: metadata.description,
+            images: metadata.image ? [metadata.image] : [],
+        },
+    };
+}
 
-    // Next.js ora sa che 'slug' è uno dei parametri statici
-    // (generati da generateStaticParams).
-    // Quando la route viene visitata, l'importazione statica è consentita.
+// Componente Page
+export default async function Page({ params }) {
+    const { slug } = params;
     
     try {
-        // L'importazione deve essere risolvibile staticamente,
-        // ma in fase di esecuzione Next.js la gestisce per te.
-        // Utilizza il percorso relativo all'importazione MDX che avevi:
         const { default: Post } = await import(`../../posts/markdown/${slug}.mdx`);
+        const metadata = getPostMetadata(slug);
         
         return (
             <article id="blog-content" className="border-10 border-(--main-border-color) rounded-lg p-5 mb-5">
+                {/* Header dell'articolo con metadati 
+                {metadata && (
+                    <header className="mb-8">
+                        <h1 className="text-4xl font-bold mb-2">{metadata.title}</h1>
+                        <div className="text-gray-600 text-sm mb-4">
+                            <time dateTime={metadata.date}>
+                                {new Date(metadata.date).toLocaleDateString('it-IT', {
+                                    year: 'numeric',
+                                    month: 'long',
+                                    day: 'numeric'
+                                })}
+                            </time>
+                            {metadata.author && <span> • {metadata.author}</span>}
+                        </div>
+                        {metadata.description && (
+                            <p className="text-lg text-gray-700 italic">{metadata.description}</p>
+                        )}
+                    </header>
+                )}*/}
+                
                 <Post />
             </article>
         );
-
     } catch (e) {
-        // Se il file non esiste (anche se SSG è passato), mostriamo 404
+        console.error("Errore caricamento post:", e);
         return notFound();
     }
 }
 
 export const dynamicParams = false;
-
-// Nota: La funzione getPostData non è più necessaria qui.
