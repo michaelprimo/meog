@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://meog.it
+
+# Sitemaps
+Sitemap: https://meog.it/sitemap.xml

@@ -2,7 +2,7 @@
 import "./globals.css";
 import Header from "./components/header/header.component";
 import Footer from "./components/footer/footer.component";
-
+import { Analytics } from "@vercel/analytics/next"
 
 export const metadata = {
   title: {
@@ -41,12 +41,14 @@ export const metadata = {
   },
 };
 
+//Parte importante per Next.js per impostare il layout di ogni pagina. Children contiene la pagina attuale.
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
         className={` antialiased md:mx-[10%] lg:mx-[20%] sm:mx-[5%] mx-2 `}
       >
+        <Analytics />
         <Header />
         <main>
           {children} 
