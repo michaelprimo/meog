@@ -2,4 +2,4 @@ User-agent: *
 Disallow: 
 Crawl-delay: 5
 Disallow: /cgi-bin/
-Sitemap: meog.it/sitemap.xml
+Sitemap: https://meog.it/sitemap.xml
