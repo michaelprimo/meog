@@ -1,22 +1,13 @@
-import { Geist, Geist_Mono } from "next/font/google";
+//src/app/layout.js . We have the main layout/template for the other pages code here. 
 import "./globals.css";
 import Header from "./components/header/header.component";
 import Footer from "./components/footer/footer.component";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata = {
   title: {
     default: "Meog: the metablog which grows with you.",
-    template: "%s | Meog: the metablog which grows with you."
+    template: "%s"
   },
   description: "Discover posts about coding, ideas, and the journey of building this metablog step by step. Meog is always growing and improving every week while you will learn what's behind a website and the technical process.",
   authors: [{ name: "Michael Primo" }],
@@ -54,10 +45,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased md:mx-[10%] lg:mx-[20%] sm:mx-[5%] mx-2 `}
+        className={` antialiased md:mx-[10%] lg:mx-[20%] sm:mx-[5%] mx-2 `}
       >
         <Header />
-        {children}
+        <main>
+          {children} 
+        </main>
         <Footer />
       </body>
     </html>
