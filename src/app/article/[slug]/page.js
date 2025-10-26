@@ -4,7 +4,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
 
-const POSTS_DIR = path.join(process.cwd(), 'src', 'posts', 'markdown');
+const POSTS_DIR = path.join(process.cwd(), 'src', 'app', 'posts', 'markdown');
 
 // Funzione helper per leggere i metadati
 function getPostMetadata(slug) {
