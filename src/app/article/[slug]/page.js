@@ -107,11 +107,12 @@ export default async function Page({ params }) {
 
         return (
             <>
-                <Head>
-                    <script type="application/ld+json">
-                        {JSON.stringify(jsonLdData)}
-                    </script>
-                </Head>
+                 <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(jsonLdData).replace(/</g, '\\u003c'),
+        }}
+      />
                 <article id="blog-content" className="border-10 border-(--main-border-color) rounded-lg p-5 mb-5">
                     <Post />
                 </article>
