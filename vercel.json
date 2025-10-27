@@ -1,0 +1,39 @@
+{
+  "redirects": [
+    {
+      "source": "/habemus_logo",
+      "destination": "/article/habemus_logo",
+      "permanent": true
+    },
+    {
+      "source": "/heres_how_we_can_style_a_website",
+      "destination": "/article/heres_how_we_can_style_a_website",
+      "permanent": true
+    },
+    {
+      "source": "/how_a_webpage_is_made",
+      "destination": "/article/how_a_webpage_is_made",
+      "permanent": true
+    },
+    {
+      "source": "/how_meog_got_indexed_on_search_engines",
+      "destination": "/article/how_meog_got_indexed_on_search_engines",
+      "permanent": true
+    },
+    {
+      "source": "/the_beauty_of_sharing_a_website",
+      "destination": "/article/the_beauty_of_sharing_a_website",
+      "permanent": true
+    },
+    {
+      "source": "/welcome_to_meog",
+      "destination": "/article/welcome_to_meog",
+      "permanent": true
+    },
+    {
+      "source": "/where_meog_lives",
+      "destination": "/article/where_meog_lives",
+      "permanent": true
+    },
+  ]
+}
