@@ -1,8 +1,9 @@
-import { notFound } from 'next/navigation'; // <-- Importa notFound
+import { notFound } from 'next/navigation';
 import path from 'path';
 import fs from 'fs';
 import matter from 'gray-matter';
 import Link from 'next/link';
+import Head from 'next/head'; 
 
 const POSTS_DIR = path.join(process.cwd(), 'src', 'app', 'posts', 'markdown');
 
@@ -18,7 +19,6 @@ function getPostMetadata(slug) {
     }
 }
 
-// Genera i parametri statici
 export function generateStaticParams() {
     console.log("Lettura da:", POSTS_DIR);
    
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }) {
             title: 'Articolo non trovato',
         };
     }
-   
+    
     return {
         title: metadata.title,
         description: metadata.description,
@@ -82,18 +82,42 @@ export async function generateMetadata({ params }) {
 // Componente Page
 export default async function Page({ params }) {
     const { slug } = await params;
-   
+
     try {
         const { default: Post } = await import(`../../posts/markdown/${slug}.mdx`);
         const metadata = getPostMetadata(slug);
-       
+        
+        // Creating JSON-LD for the article
+        const jsonLdData = {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": metadata.title,
+            "description": metadata.description,
+            "image": metadata.image || '',
+            "author": {
+                "@type": "Person",
+                "name": metadata.author
+            },
+            "datePublished": metadata.date,
+            "mainEntityOfPage": {
+                "@type": "WebPage",
+                "@id": `https://meog.it/posts/${slug}`
+            }
+        };
+
         return (
-            <article id="blog-content" className="border-10 border-(--main-border-color) rounded-lg p-5 mb-5">
-                <Post />
-            </article>
+            <>
+                <Head>
+                    <script type="application/ld+json">
+                        {JSON.stringify(jsonLdData)}
+                    </script>
+                </Head>
+                <article id="blog-content" className="border-10 border-(--main-border-color) rounded-lg p-5 mb-5">
+                    <Post />
+                </article>
+            </>
         );
     } catch (e) {
-        
         notFound();
     }
 }
