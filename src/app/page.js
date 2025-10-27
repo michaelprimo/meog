@@ -23,9 +23,11 @@ export default function Home() {
   return (
     <div className="">
       <PostsSection />
-      <script
+     <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(websiteSchema).replace(/</g, '\\u003c'),
+        }}
       />
     </div>
   );
