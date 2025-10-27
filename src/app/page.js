@@ -17,7 +17,7 @@ const websiteSchema = {
     "https://www.michaelprimo.it",
     "https://www.linkedin.com/in/misticalinteractive/"
   ]
-}
+};
 
 export default function Home() {
   return (
