@@ -80,3 +80,6 @@ yarn build
 ```
 
 Made with 💙 in Italy
+
+My website: `https://www.michaelprimo.it/`
+My Linkedin (where I talk more about Web Development): `https://www.linkedin.com/in/misticalinteractive/`
