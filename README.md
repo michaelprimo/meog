@@ -11,7 +11,7 @@ This project is built with a focus on **performance** and **technical SEO**, lev
 | Area | Technology/Feature | Goal |
 | :--- | :--- | :--- |
 | **Framework** | **Next.js 16** (App Router) | Modern and scalable architecture. |
-| **Hosting** | **Vercel** Ideal for Next.js and dynamic websites like Meog. |
+| **Hosting** | **Vercel** Ideal for Next.js and dynamic websites like Meog. | Enabling the full potential of Next.js (and SSR,SSG and ISG). |
 | **Rendering** | **Static Site Generation (SSG)** | Maximum speed (100% Performance, low LCP). |
 | **Styling** | **Tailwind CSS** | Rapid development and minimized final CSS. |
 | **Content** | **Dynamic MDX/Markdown** | Flexible article management and integration of React components. |
@@ -77,3 +77,6 @@ To generate static HTML files for deployment on Netlify/Vercel:
 ```bash
 yarn build
 # Static files are exported to the 'out/' folder
+```
+
+Made with 💙 in Italy
