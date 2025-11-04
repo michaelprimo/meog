@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./components/header/header.component";
 import Footer from "./components/footer/footer.component";
 import { Analytics } from "@vercel/analytics/next"
+import { SpeedInsights } from "@vercel/speed-insights/next"
 
 export const metadata = {
   title: {
@@ -49,6 +50,7 @@ export default function RootLayout({ children }) {
         className={` antialiased md:mx-[10%] lg:mx-[20%] sm:mx-[5%] mx-2 `}
       >
         <Analytics />
+        <SpeedInsights />
         <Header />
         <main>
           {children} 

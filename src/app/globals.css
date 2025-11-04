@@ -116,3 +116,8 @@ li
     list-style: disc;
     margin-left: 14px !important;
 }
+
+#blog-content img[src="/meog_logo.webp"] {
+    width: 200px;
+    height: auto;
+}
